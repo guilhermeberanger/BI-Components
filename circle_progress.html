@@ -1,0 +1,60 @@
+<html lang='pt-br'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style>
+	.box{
+    	position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50% , -50%);
+        background: rgba(0,0,0,0.40);
+        border-radius: 15px;
+        padding: 15px
+    }
+    
+    .box-circle svg{
+    	width: 150px;
+        height: 150px;
+        position: relative;
+    }
+    circle{
+    	width: 150px;
+        height: 150px;
+        fill: none;
+        stroke:#F7F9F8;
+        stroke-width: 10;
+        transform: translate(5px,5px);
+        stroke-dasharray:440;
+        stroke-dashoffset: 440;
+
+    }
+    circle:nth-child(1){
+    	stroke-dashoffset:0;
+        stroke:#9DD6C6
+    }
+    circle:nth-child(2){
+        stroke:#30AE8C;
+        transition: stroke-dashoffset 0.8s;
+    }
+    
+    
+    
+</style>
+
+<body>
+	<div class='box'>
+    	<div class='box-circle'>
+        	<svg>
+            	<circle  cx='70' cy='70' r='70'></circle>
+                <circle  id="circleProgress" cx='70' cy='70' r='70' style="stroke-dashoffset: 200;transition:stroke-dashoffset 0.9s"></circle>
+            </svg>
+        </div>
+    </div>
+
+</body>
+
+</html>
